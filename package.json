@@ -1,0 +1,55 @@
+{
+  "name": "@micromatrix.org/docx-math-converter",
+  "version": "1.0.0",
+  "description": "Converting LaTeX, MathML, or OMML strings to math objects using docx.js",
+  "main": "./dist/docx-math-converter.cjs.js",
+  "module": "./dist/docx-math-converter.esm.js",
+  "types": "./dist/docx-math-converter.d.ts",
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "scripts": {
+    "dev": "vite build -w",
+    "build": "tsc && vite build",
+    "test": "vitest"
+  },
+  "keywords": [
+    "docx",
+    "Latex",
+    "MathML",
+    "OMML"
+  ],
+  "author": "hideinmatrix",
+  "license": "MIT",
+  "files": [
+    "dist",
+    "src/mathml2omml",
+    "THIRD_PARTY_NOTICES.md",
+    "licenses"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hideinmatrix/docx-math-converter"
+  },
+  "peerDependencies": {
+    "docx": "^9.6.1"
+  },
+  "dependencies": {
+    "entities": "^6.0.1",
+    "jsdom": "^23.2.0",
+    "mathjax": "^3.2.2"
+  },
+  "devDependencies": {
+    "@types/jsdom": "^21.1.6",
+    "@types/node": "^20.10.7",
+    "docx": "^9.6.1",
+    "typescript": "^5.2.2",
+    "vite": "^8.0.0",
+    "vite-plugin-dts": "^4.5.4",
+    "vitest": "^4.1.0"
+  },
+  "browser": {
+    "jsdom": false,
+    "mathjax": "mathjax/es5/tex-mml-chtml.js"
+  }
+}
